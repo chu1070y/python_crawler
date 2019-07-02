@@ -63,6 +63,7 @@ def crawling_nene():
         if end_page == '':
             end_page = bs.find('span', attrs={'class': 'page_noselect'}).text
 
+        print(f'{datetime.now()} : success for request[{url}]')
         # 끝 검출
         if int(end_page) < page:
             break
