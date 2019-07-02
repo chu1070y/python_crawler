@@ -6,7 +6,7 @@ from datetime import datetime
 from itertools import count
 from urllib.request import Request, urlopen
 
-import pandas as pd
+# import pandas as pd
 from bs4 import BeautifulSoup
 from selenium import webdriver
 
@@ -39,9 +39,9 @@ def crawling_pelicana():
             results.append((name, address) + tuple(sidogu))
 
     # store
-    table = pd.DataFrame(results, columns=['name', 'address', 'sido', 'gu'])
-    print(table)
-    table.to_csv('__results__/pelicana.csv', encoding='utf-8', mode='w', index=True)
+    # table = pd.DataFrame(results, columns=['name', 'address', 'sido', 'gu'])
+    # print(table)
+    # table.to_csv('__results__/pelicana.csv', encoding='utf-8', mode='w', index=True)
 
     # for result in results:
     #     print(result)
@@ -77,12 +77,12 @@ def crawling_nene():
             results.append((name, address, sido, gusi))
 
     # store
-    table = pd.DataFrame(results, columns=['name', 'address', 'sido', 'gusi'])
+    # table = pd.DataFrame(results, columns=['name', 'address', 'sido', 'gusi'])
 
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
     # table.to_csv(f'{BASE_DIR}/__results__/nene.csv', encoding='utf-8', mode='w', index=True)
-    table.to_csv('/root/crawling-results/nene.csv', encoding='utf-8', mode='w', index=True)
+    # table.to_csv('/root/crawling-results/nene.csv', encoding='utf-8', mode='w', index=True)
 
 def crawling_kyochon():
     results = []
@@ -111,9 +111,9 @@ def crawling_kyochon():
                 results.append((name, address) + tuple(sidogu))
 
     # store
-    table = pd.DataFrame(results, columns=['name', 'address', 'sido', 'gusi'])
-    print(table)
-    table.to_csv('__results__/kyochon.csv', encoding='utf-8', mode='w', index=True)
+    # table = pd.DataFrame(results, columns=['name', 'address', 'sido', 'gusi'])
+    # print(table)
+    # table.to_csv('__results__/kyochon.csv', encoding='utf-8', mode='w', index=True)
 
 
 def crawling_goobne():
@@ -153,9 +153,9 @@ def crawling_goobne():
     wd.quit()
 
     # store
-    table = pd.DataFrame(results, columns=['name', 'address', 'sido', 'gusi'])
-    print(table)
-    table.to_csv('__results__/goobne.csv', encoding='utf-8', mode='w', index=True)
+    # table = pd.DataFrame(results, columns=['name', 'address', 'sido', 'gusi'])
+    # print(table)
+    # table.to_csv('__results__/goobne.csv', encoding='utf-8', mode='w', index=True)
 
 
 if __name__ == '__main__':
