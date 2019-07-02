@@ -119,7 +119,7 @@ def crawling_goobne():
     results = []
     url = 'http://www.goobne.co.kr/store/search_store.jsp'
 
-    wd = webdriver.Chrome('D:\cafe24\chromedriver_win32\chromedriver.exe')
+    wd = webdriver.Chrome('/cafe24/chromedriver/chromedriver.exe')
     wd.get(url)
     time.sleep(5)
 
