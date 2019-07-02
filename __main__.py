@@ -1,3 +1,4 @@
+import os
 import ssl
 import sys
 import time
@@ -76,9 +77,11 @@ def crawling_nene():
 
     # store
     table = pd.DataFrame(results, columns=['name', 'address', 'sido', 'gusi'])
-    print(table)
-    table.to_csv('__results__/nene.csv', encoding='utf-8', mode='w', index=True)
 
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+    # table.to_csv(f'{BASE_DIR}/__results__/nene.csv', encoding='utf-8', mode='w', index=True)
+    table.to_csv('/root/crawling-results/nene.csv', encoding='utf-8', mode='w', index=True)
 
 def crawling_kyochon():
     results = []
